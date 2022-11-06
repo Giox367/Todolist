@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="tasks">
+    <ul>
+      <li *ngFor="let item of listodo let i = index">
+        <span>{{i+1}}</span> - <span>{{item.title}}</span
+        ><span><button (click)="onCompleted(item)">V</button></span>
+      </li>
+    </ul>
+    <input type="text" [(ngModel)]="textTask" /><button
+      (click)="addtodo(textTask)"
+    >
+      +
+    </button>
+  </div>
+</div>
